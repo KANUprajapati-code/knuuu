@@ -19,10 +19,13 @@ app.use(express.static(path.join(__dirname, 'client'))); // Serve frontend
 
 // MongoDB Connection
 
-const mongoURI = 'mongodb+srv://kanuprajapati717:kanu1233@cluster0.z29xexj.mongodb.net/inventoryApp';
-mongoose.connect(mongoURI)
-
-  .then(() => {
+// const mongoURI = 'mongodb+srv://kanuprajapati717:kanu1233@cluster0.z29xexj.mongodb.net/inventoryApp';
+// mongoose.connect(mongoURI)
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => {
     app.listen(3000, () => console.log('Server running on http://localhost:3000'));
     console.log('MongoDB Connected');
   })
