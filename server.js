@@ -97,14 +97,3 @@ app.get('/api/billing', async (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
 
-router.post('/billing', async (req, res) => {
-  try {
-    const data = req.body;
-    const bill = new BillModel(data);
-    await bill.save();
-    res.status(201).json({ success: true, message: "Bill saved" });
-  } catch (err) {
-    console.error(err); // <-- important for debugging
-    res.status(500).json({ success: false, message: "Server error" });
-  }
-});
