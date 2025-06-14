@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inventory & Billing App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Work Part</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Inventory Management</h1>
+    <div class="bill-meta">
+      <input type="date" id="billDate" />
+      <input type="text" id="vehicleModel" placeholder="Bike/Car Model" />
+      <input type="text" id="vehicleNumber" placeholder="Vehicle Number" />
+      <input type="text" id="clientName" placeholder="Client Name" />
+      <input type="text" id="clientMobile" placeholder="Mobile Number" />
+    </div>
+
+    <section class="billing-section">
+      <h2>Billing</h2>
+      <input type="text" id="customerName" placeholder="Customer Name" />
+    <table class="client-detail-table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Vehicle Model</th>
+      <th>Vehicle Number</th>
+      <th>Client Name</th>
+      <th>Mobile Number</th>
+      <th>Price</th> <!-- ✅ New column added -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="tdDate"></td>
+      <td id="tdVehicleModel"></td>
+      <td id="tdVehicleNumber"></td>
+      <td id="tdClientName"></td>
+      <td id="tdClientMobile"></td>
+      <td id="tdPrice"></td> <!-- ✅ New data cell -->
+    </tr>
+  </tbody>
+</table>
+
+<div class="bill-preview">
+  <p><strong>Date:</strong> <span id="prevDate"></span></p>
+  <p><strong>Vehicle Model:</strong> <span id="prevVehicleModel"></span></p>
+  <p><strong>Vehicle Number:</strong> <span id="prevVehicleNumber"></span></p>
+  <p><strong>Client Name:</strong> <span id="prevClientName"></span></p>
+  <p><strong>Mobile Number:</strong> <span id="prevClientMobile"></span></p>
+  <p><strong>Price:</strong> <span id="prevPrice"></span></p> <!-- ✅ New price line -->
+</div>
+
+
+      <!-- Billing Item Inputs Including Client Info -->
+      <div class="billing-form">
+        <input type="text" id="itemName" placeholder="Item Name" />
+        <input type="number" id="itemQty" placeholder="Quantity" />
+        <input type="number" id="itemPrice" placeholder="Price" />
+        <input type="date" id="itemDate" placeholder="Date" />
+        <input type="text" id="itemModel" placeholder="Vehicle Model" />
+        <input type="text" id="itemNumber" placeholder="Vehicle Number" />
+        <input type="text" id="itemClientName" placeholder="Client Name" />
+        <input type="text" id="itemClientMobile" placeholder="Mobile Number" />
+        <button onclick="addBillItem()">Add Item</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Date</th>
+            <th>Model</th>
+            <th>Number</th>
+            <th>Client</th>
+            <th>Mobile</th>
+
+
+          </tr>
+        </thead>
+        <tbody id="billingTableBody"></tbody>
+      </table>
+<input type="hidden" id="editBillId" />
+
+      <div class="buttons">
+        <button onclick="saveBill()">Save</button>
+        <button onclick="printBill()">Print</button>
+        <button onclick="exportBillToExcel()">Export to Excel</button>
+        <button id="updateBtn">Update</button>
+
+
+      </div>
+    </section>
+
+    <section class="inventory-section">
+      <h2>Inventory</h2>
+
+      <div class="inventory-form">
+        <input type="text" id="invItem" placeholder="Item Name" />
+        <input type="text" id="invDesc" placeholder="Description" />
+        <input type="number" id="invQty" placeholder="Quantity" />
+        <input type="text" id="invClientName" placeholder="Client Name" />
+        <input type="text" id="invClientMobile" placeholder="Client Mobile" />
+        <input type="text" id="invVehicleModel" placeholder="Vehicle Model" />
+        <input type="text" id="invVehicleNumber" placeholder="Vehicle Number" />
+        <input type="date" id="invDate" placeholder="Date" />
+        <button onclick="addInventoryItem()">Add Inventory</button>
+        <button onclick="exportInventoryToExcel()">Export Inventory to Excel</button>
+
+      </div>
+
+      <table>
+        <thead>
+          <tr><th>Item</th><th>Description</th><th>Quantity</th><th>Client</th><th>Mobile</th><th>Model</th><th>Number</th><th>Date</th></tr>
+        </thead>
+        <tbody id="inventoryTableBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

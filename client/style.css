@@ -1,0 +1,251 @@
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f8fc;
+  color: #333;
+}
+
+header {
+  background: #0a4c9a;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li {
+  color: white;
+  cursor: pointer;
+}
+
+main {
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: #0a4c9a;
+}
+
+section {
+  background: white;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 8px;
+  max-width: 700px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #0a4c9a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #063b7a;
+}
+.bill-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bill-meta input {
+  flex: 1;
+  min-width: 150px;
+  padding: 0.5rem;
+}
+.bill-preview {
+  background: #f0f4ff;
+  padding: 1rem;
+  border-left: 4px solid #0a4c9a;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.bill-preview p {
+  margin: 0.3rem 0;
+}
+.inventory-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.inventory-form input {
+  flex: 1;
+  min-width: 120px;
+}
+.client-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background: #fff9f0;
+}
+
+.client-detail-table th,
+.client-detail-table td {
+  border: 1px solid #ccc;
+  padding: 0.6rem;
+  text-align: center;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f8fc;
+  color: #333;
+}
+
+header {
+  background: #0a4c9a;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  color: white;
+  cursor: pointer;
+}
+
+main {
+  padding: 2rem;
+
+}
+
+h1 {
+  text-align: center;
+  color: #0a4c9a;
+}
+
+section {
+  background: white;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 8px;
+  max-width: 1200px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.bill-meta, .inventory-form, .billing-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bill-meta input,
+.inventory-form input,
+.billing-form input {
+  flex: 1;
+  min-width: 150px;
+}
+
+.bill-preview {
+  background: #f0f4ff;
+  padding: 1rem;
+  border-left: 4px solid #0a4c9a;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.bill-preview p {
+  margin: 0.3rem 0;
+}
+
+.client-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background: #fff9f0;
+}
+
+.client-detail-table th,
+.client-detail-table td,
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #0a4c9a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #063b7a;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .bill-meta input,
+  .inventory-form input,
+  .billing-form input {
+    min-width: 100%;
+  }
+}
