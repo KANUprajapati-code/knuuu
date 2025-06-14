@@ -306,18 +306,3 @@ function updateBillMetaTableAndPreview(item) {
 
 }
 
-fetch("/api/billing", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify(data)
-})
-.then(res => {
-  if (!res.ok) {
-    throw new Error("Server error");
-  }
-  return res.json();
-})
-.then(data => console.log(data))
-.catch(err => alert("Error: " + err.message));
